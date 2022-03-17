@@ -46,14 +46,43 @@ namespace Task_Class
                                    "2. Butun kitablari goster\n" +
                                    "0. Proqrami bagla\n",0,2);
 
-            switch (key)
+            if (key == 2)
+            {
+                foreach (var item in books)
                 {
-                case 0:
-                    return;
-                
+                    item.GetInfo();
+                    Console.WriteLine("-------------------------------");
+                }
+            }
+            else if (key == 1)
+            {
+                int num = Convert.ToInt32(Console.ReadLine());
+
                 
 
+
+                foreach (var item in books)
+                {
+
+                    Console.WriteLine("--------------------------");
+                }
             }
+            else
+                return;
+
+
+
+
+
+            //switch (key)
+            //    {
+            //    case 0:
+            //        return;
+            //    case 1:
+
+            //        break;                
+
+            //}
 
 
 
