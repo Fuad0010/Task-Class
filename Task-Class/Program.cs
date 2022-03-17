@@ -42,12 +42,18 @@ namespace Task_Class
                 Console.WriteLine("-------------------------------");
             }
 
-            
             int key = GetInputInt ("1. Kitablari qiymete gore filterle\n" +
                                    "2. Butun kitablari goster\n" +
-                                   "0. Proqrami bagla\n",0,3);
+                                   "0. Proqrami bagla\n",0,2);
 
+            switch (key)
+                {
+                case 0:
+                    return;
+                case 1:
+                
 
+            }
 
 
 
