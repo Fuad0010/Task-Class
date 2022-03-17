@@ -20,8 +20,14 @@ namespace Task_Class.Moduls
             Console.WriteLine($"No: {No}\n" +
                               $"Name: {Name}\n" +
                               $"Price: {Price}\n" +
-                              $"Count {Count}");
+                              $"Count {Count}\n" +
+                              $"-------------------");
         }
+        public void GetPrice()
+        {
 
+        }
+    
+    
     }
 }

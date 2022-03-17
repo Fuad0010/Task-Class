@@ -22,7 +22,7 @@ namespace Task_Class
 
                 int count = GetInputInt($"Please enter the count: ", 0, 100);
 
-                string genre = GetInputWord($"Please enter the genre: ",1, 10);
+                string genre = GetInputWord($"Please enter the genre: ",1, 15);
 
                 books[i] = new BookClass(genre,no,name, price, count)
                 {
@@ -42,34 +42,43 @@ namespace Task_Class
                 Console.WriteLine("-------------------------------");
             }
 
-            int key = GetInputInt ("1. Kitablari qiymete gore filterle\n" +
-                                   "2. Butun kitablari goster\n" +
-                                   "0. Proqrami bagla\n",0,2);
-
-            if (key == 2)
+            do
             {
-                foreach (var item in books)
+               
+               int key = GetInputInt("-----------------------------------\n" +
+                                      "1. Kitablari qiymete gore filterle\n" +
+                                      "2. Butun kitablari goster\n" +
+                                      "0. Proqrami bagla\n", 0, 2);
+
+
+                if (key == 2)
                 {
-                    item.GetInfo();
-                    Console.WriteLine("-------------------------------");
+                    foreach (var item in books)
+                    {
+                        item.GetInfo();
+                        Console.WriteLine("-------------------------------");
+                    }
                 }
-            }
-            else if (key == 1)
-            {
-                int num = Convert.ToInt32(Console.ReadLine());
-
-                
-
-
-                foreach (var item in books)
+                else if (key == 1)
                 {
+                    Console.WriteLine("Please enter max value for ");
+                    int min = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter min value for ");
+                    int max = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("--------------------------");
+                    
+
+                    foreach (var item in books)
+                    {
+                        //if (min > )
+                            item.GetInfo();
+                        Console.WriteLine("--------------------------");
+                    }
                 }
-            }
-            else
+                else if (key == 0)
                 return;
-
+                    
+            } while(true); 
 
 
 
