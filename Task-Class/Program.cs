@@ -62,17 +62,22 @@ namespace Task_Class
                 else if (key == 1)
                 {
 
-                    int min = GetInputInt("Please enter the min value", 1, 1001);
-                    int max = GetInputInt("Please enter the min value", 0, 1000);
-                    if (min < price && max > price)
+                    int min = GetInputInt("Please enter the min value: ", 1, 1001);
+                    int max = GetInputInt("Please enter the max value: ", 0, 1000);
+
+                    for (int i = 0; i < count1; i++)
                     {
-                        foreach (var item in books)
+                        if (min <= books[i].Price || max >= books[i].Price)
                         {
-                            item.GetInfo();
-                            Console.WriteLine("--------------------------");
+                            foreach (var item in books)
+                            {
+                                item.GetInfo();
+                                Console.WriteLine("--------------------------");
+                            }
                         }
                     }
                 }
+                    
                 else if (key == 0)
                     return;
 
