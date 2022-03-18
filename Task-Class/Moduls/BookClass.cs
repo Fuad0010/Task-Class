@@ -23,10 +23,8 @@ namespace Task_Class.Moduls
                               $"Count {Count}\n" +
                               $"-------------------");
         }
-        public void GetPrice()
-        {
-
-        }
+        
+        
     
     
     }
